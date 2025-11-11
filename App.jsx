@@ -5,6 +5,7 @@ import OnBoadingScreen from './src/screens/OnBoadingScreen';
 import SignIn from './src/screens/SignIn';  // Import SignIn screen bhi karna hoga
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Verification from './src/screens/Verification';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ const App = () => {
       <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="OnBoadingScreen">
         <Stack.Screen name="OnBoadingScreen" component={OnBoadingScreen} />
         <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen name="Verification" component={Verification} />
       </Stack.Navigator>
     </NavigationContainer>
   );

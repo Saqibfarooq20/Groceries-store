@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, Image, StyleSheet, StatusBar } from 'react-native';
+import { View, Text, Image, StyleSheet, StatusBar, TextInput } from 'react-native';
 import SystemNavigationBar from 'react-native-system-navigation-bar';
 import Btn from '../components/Btn';
   
@@ -15,11 +15,9 @@ useEffect(() => {
 
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#000' }}>
-      <StatusBar hidden={true} />
-      
+      <StatusBar hidden={true} />     
       <Image source={require('../assets/images/onBoadingImg.png')} />
       <Image source={require('../assets/images/Group.png')} style={styles.caretImg} />
-      
       <Text style={styles.welcomeText}>Welcome</Text>
       <Text style={styles.greetingText}>to our store</Text>
       <Text style={styles.additionalText}>Get your groceries in as fast as one hour</Text>
