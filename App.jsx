@@ -6,6 +6,7 @@ import SignIn from './src/screens/SignIn';  // Import SignIn screen bhi karna ho
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Verification from './src/screens/Verification';
+import SignUp from './src/screens/SignUp';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ const App = () => {
         <Stack.Screen name="OnBoadingScreen" component={OnBoadingScreen} />
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="Verification" component={Verification} />
+        <Stack.Screen name="SignUp" component={SignUp} />
       </Stack.Navigator>
     </NavigationContainer>
   );

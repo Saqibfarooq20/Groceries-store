@@ -3,6 +3,9 @@ import { View, Text, Image, StyleSheet, TouchableOpacity, TextInput, Keyboard } 
 import { useNavigation } from '@react-navigation/native';
 import { FAB } from 'react-native-paper';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
+
 
 const Verification = () => {
   const navigation = useNavigation();
@@ -87,8 +90,8 @@ const Verification = () => {
       )}
 
       {/* FAB - moves up when keyboard is visible */}
-      <FAB
-        icon={require('../assets/images/greenArrow.png')}
+      {/* <FAB
+        icon="arrow-right"
         style={[styles.fab, isKeyboardVisible && styles.fabKeyboardVisible]}
         color="#fff"
         onPress={() => {
@@ -97,7 +100,13 @@ const Verification = () => {
             
             }
         }}
-      />
+      /> */}
+
+
+      <TouchableOpacity style={styles.ant}>
+               <AntDesign name="right" color="#ffffff" size={24} />
+
+      </TouchableOpacity>
     </View>
 </KeyboardAwareScrollView>
   );
@@ -163,7 +172,18 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     elevation: 6,
   },
-  
+  ant : {
+    position: 'absolute',
+    right: 24,
+    bottom: 42,
+    width:60,
+    elevation:3,
+    height:60,
+    backgroundColor: '#53B175',
+    borderRadius:30,
+    justifyContent:'center',
+    alignItems:'center'
+  }
 });
 
 export default Verification;
